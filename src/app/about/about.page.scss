@@ -1,0 +1,40 @@
+img {
+    width: 270px;
+    height: 200px;
+    border: 1px #23282d solid;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.grid-container {
+    display: grid;
+
+    grid-gap: 10px;
+    background-color: #23282d;
+    padding: 10px;
+  }
+
+  .one {
+    grid-column: 1 / 3;
+    grid-row: 1;
+  }
+
+  .two { 
+    grid-column: 2 / 4;
+    grid-row: 1 / 3;
+  }
+
+  p {
+      font-size: 25;
+      color: azure;
+  }
+
+  ion-card-header{
+      font-size: 20px;
+  }
+ #footer {
+    text-align: center;
+    font-size: 10px;
+    color: #23282d
+}

@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      <ion-icon name="person-add"></ion-icon> Register
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="RegisterForm">
+    <ion-list>
+
+      <ion-item lines="full">
+        <ion-label position="floating">Fullname</ion-label>
+        <ion-input formControlName="fullname" type="text"></ion-input>
+      </ion-item>
+
+      <span *ngIf="RegisterForm.controls.fullname.errors?.required">Fullname required </span>
+      <span *ngIf="RegisterForm.controls.fullname.errors?.minLength">Fullname not valid </span>
+
+      <ion-item lines="full">
+        <ion-label position="floating">Email</ion-label>
+        <ion-input formControlName="email" type="email"></ion-input>
+      </ion-item>
+
+      <span *ngIf="RegisterForm.controls.email.errors?.required">Email required </span>
+      <span *ngIf="RegisterForm.controls.email.errors?.pattern">Email not valid </span>
+
+      <ion-item lines="full">
+        <ion-label position="floating">Age</ion-label>
+        <ion-input formControlName="age" type="text"></ion-input>
+      </ion-item>
+
+      <span *ngIf="RegisterForm.controls.age.errors?.required">Age required </span>
+      <span *ngIf="RegisterForm.controls.age.errors?.maxLength">Age not valid </span>
+
+      <ion-item lines="full">
+        <ion-label position="floating">Password</ion-label>
+        <ion-input formControlName="password" type="Password"></ion-input>
+      </ion-item>
+
+      <span *ngIf="RegisterForm.controls.password.errors?.required">password required </span>
+      <span *ngIf="RegisterForm.controls.password.errors?.minLength">password not valid </span>
+
+      <br><br>
+
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" class="btn btn-primary btn-sm">Register</ion-button>
+         
+        </ion-col>
+      </ion-row>
+    </ion-list>
+    <div class="alert alert-primary" role="alert">
+      This is a primary alert—check it out!
+    </div>
+    <div class="alert alert-success" role="alert">
+      This is a success alert—check it out!
+    </div>
+  </form>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    &nbsp;<ion-icon name="logo-facebook"></ion-icon>
+    &nbsp;<ion-icon name="logo-linkedin"></ion-icon>
+    &nbsp;<ion-icon name="logo-twitter"></ion-icon>
+    <p>© 2020 Copyright All Rights Reserved</p>
+  </ion-toolbar>
+</ion-footer>

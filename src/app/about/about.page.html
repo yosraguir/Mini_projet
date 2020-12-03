@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title><ion-icon name="people"></ion-icon> About</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-card>
+        <ion-card-header>Contact</ion-card-header>
+        <ion-card-content class="grid-container">
+        <img src="{{ contact.photo }}"class="one">
+        <div class="two">
+        <p>
+        Nom :<strong>{{ contact.nom }}</strong>
+        </p>
+        <p>
+        Prénom :<strong>{{ contact.prenom }}</strong>
+        </p>
+        <P>
+        Email : <strong>{{ contact.email }}</strong>
+        </P>
+        <P>
+        Age : <strong>{{ contact.age }}</strong>
+        </P>
+        <P>
+        Profession : <strong>{{ contact.profession }}</strong>
+        </P>
+        </div>
+       
+        </ion-card-content>
+        </ion-card>
+
+</ion-content>
+<ion-footer >
+  <ion-toolbar>
+    &nbsp;<ion-icon name="logo-facebook"></ion-icon>
+    &nbsp;<ion-icon name="logo-linkedin"></ion-icon>
+    &nbsp;<ion-icon name="logo-twitter"></ion-icon>
+    <p>© 2020 Copyright All Rights Reserved</p>
+  </ion-toolbar>
+  </ion-footer>
